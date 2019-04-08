@@ -216,3 +216,17 @@ function sumAll(arr) {
 }
 sumAll([1, 4]);
 
+//Seek and Destroy
+function destroyer(arr) {
+  // Remove all the values
+  let args = Array.prototype.slice.call(arguments);
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < args.length; j++){
+      if(arr[i] === args[j]){
+        delete arr[i];
+      }
+    }
+  }
+  return arr.filter(Boolean);
+}
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
