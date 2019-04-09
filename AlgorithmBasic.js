@@ -230,3 +230,26 @@ function destroyer(arr) {
   return arr.filter(Boolean);
 }
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+//Where do i belong
+function getIndexToIns(arr,num){
+  arr.sort(function(a,b){return a - b;});
+//#1:
+  let i = 0;
+  while(num > arr[i]){i++;}
+  return i;
+  
+// #2:
+//   for(let i = 0; i < arr.length; i++){
+//     if(arr[i] >= num){
+//       return i;
+//     }
+//   }
+//   return arr.length;
+  
+//#3:
+//   arr.push(num);
+//   arr.sort(function(a,b){return a-b;});
+//   return arr.indexOf(num);
+}
+getIndexToIns([40, 60], 50);
