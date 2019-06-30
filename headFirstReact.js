@@ -1,3 +1,4 @@
+//Create a Component with Composition
 const ChildComponent = () => {
   return(
     <div>
@@ -19,3 +20,6 @@ class ParentComponent extends React.Component{
     );
   }
 }
+
+
+//Use React to Render Nested Components
