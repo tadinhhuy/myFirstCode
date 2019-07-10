@@ -19,3 +19,31 @@ function Stack() {
         collection.length = 0;
     }
 }
+
+
+
+const ES6 = "ES6";
+
+class Stack {
+    constructor() {
+        this.collection = [];
+    }
+    print(){
+        console.log(this.collection);
+    }
+    push(val){
+        retiurn this.collection.push(val);
+    }
+    pop(){
+        return this.collection.pop();
+    }
+    peek(){
+        return this.collection[this.collection.length-1];
+    }
+    isEmpty(){
+        return this.collection.length === 0;
+    }
+    clear(){
+        return this.collection.length = 0;
+    }
+}
