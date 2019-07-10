@@ -8,4 +8,4 @@ function insertionSort(arr){
   }
   return arr;
 }
-© 2019 GitHub, Inc.
+
