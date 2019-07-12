@@ -3,7 +3,7 @@ function PriorityQueue () {
     this.printCollection = function() {
       console.log(collection);
     };
-    // Only change code below this line
+    
     this.enqueue = function(element) {
       if(this.isEmpty()){
         collection.push(element);
@@ -34,7 +34,7 @@ function PriorityQueue () {
     this.isEmpty = function(){
       return collection.length === 0;
     }
-    // Only change code above this line
+    
 }
 
 
