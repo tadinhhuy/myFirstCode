@@ -32,7 +32,7 @@ class Stack {
         console.log(this.collection);
     }
     push(val){
-        retiurn this.collection.push(val);
+        return this.collection.push(val);
     }
     pop(){
         return this.collection.pop();
