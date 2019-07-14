@@ -11,7 +11,7 @@ function PriorityQueue () {
         let added = false;
         for(let i = 0; i < collection.length; i++){
           if(element[1] < collection[i][1]){ //checking priority
-            collection.splice(i,0,element);
+            collection.splice(i,0,element); // push element into collection by splice
             added = true;
             break;
           }
