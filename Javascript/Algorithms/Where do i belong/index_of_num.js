@@ -1,10 +1,14 @@
-function getIndexToIns(arr, num){
-  arr.sort((a,b) => {a - b});
-  let i = 0;
-  while(num > arr[i]){
-    i++;
+function getIndexToIns(arr, num) {
+  arr.sort(function(a, b) {
+    return a - b;
+  });
+
+  for (var a = 0; a < arr.length; a++) {
+    if (arr[a] >= num)
+      return a;
   }
-  return i;
+
+  return arr.length;
 }
 
 //Or:
@@ -16,15 +20,6 @@ function getIndexToIns(arr, num){
 }
 
 
-//Or:
-function getIndexToIns(arr, num){
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] >= num){
-      return i;
-    }
-  }
-  return arr.length;
-}
 
 
 getIndexToIns([40, 60, 70, 80], 50);
