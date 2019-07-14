@@ -38,3 +38,8 @@ function PriorityQueue () {
 }
 
 
+//another enqueue:
+this.dequeue = function(element){
+    this.collection.push(element);
+    this.collection.sort((a,b) => a[1] - b[1]); //sorting priority
+}
