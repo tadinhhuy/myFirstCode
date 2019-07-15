@@ -9,7 +9,7 @@ function Set() {
     this.values = function() {
         return collection;
     };
-
+    //this method will add an element into collection
     this.add = function(element){
         if(!this.has(element)){
             collection.push(element);
@@ -17,4 +17,14 @@ function Set() {
         }
         return false;
     } 
+    
+    // this method will remove an element inside collection
+    this.remove = function(element){
+        let index = collection.indexOf(element);
+        if(this.has(element)){
+            collection.splice(index,1);
+            return true;
+        }
+        return false;
+    }
 }
