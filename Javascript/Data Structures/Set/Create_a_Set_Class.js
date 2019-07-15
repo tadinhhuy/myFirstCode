@@ -27,4 +27,8 @@ function Set() {
         }
         return false;
     }
+    
+    this.size = function(){
+        return collection.length;
+    }
 }
