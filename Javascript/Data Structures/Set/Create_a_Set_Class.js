@@ -36,6 +36,7 @@ function Set() {
         return collection.length;
     }
     
+    // this method will return the union of two sets
     this.union = function(otherSet){
         let unionSet = new Set();
         let firstSet = this.values();
