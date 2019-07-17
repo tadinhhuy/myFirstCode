@@ -52,4 +52,16 @@ function Set() {
         return unionSet;
     }
     
+    // this method will return the intersection of two sets as a new set
+    this.intersection = function(otherSet){
+        let intersectionSet = new Set();
+        let firstSet = otherSet.values();
+        if(otherSet.has(e)){
+            firstSet.forEach(function(e){
+                intersectionSet.add(e);
+            })
+        }
+        return intersectionSet;
+    }
+    
 }
