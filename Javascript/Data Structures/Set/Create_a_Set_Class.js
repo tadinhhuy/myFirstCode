@@ -55,13 +55,25 @@ function Set() {
     // this method will return the intersection of two sets as a new set
     this.intersection = function(otherSet){
         let intersectionSet = new Set();
-        let firstSet = otherSet.values();
-        if(otherSet.has(e)){
-            firstSet.forEach(function(e){
-                intersectionSet.add(e);
-            })
-        }
+        let firstSet = this.values();
+        firstSet.forEach(function(ele){
+            if(otherSet.has(ele)){
+                intersectionSet.add(ele);
+            }
+        });
         return intersectionSet;
     }
     
 }
+
+
+// for test:
+  let setA = new Set();
+  let setB = new Set();
+  setA.add("a");
+  setA.add("b");
+  setA.add("c");
+  setB.add("c");
+  setB.add("d");
+  let intersectionSetAB = setA.intersection(setB);
+  (intersectionSetAB.values();
