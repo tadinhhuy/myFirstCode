@@ -56,24 +56,32 @@ function Set() {
     this.intersection = function(otherSet){
         let intersectionSet = new Set();
         let firstSet = this.values();
-        firstSet.forEach(function(ele){
-            if(otherSet.has(ele)){
-                intersectionSet.add(ele);
+        firstSet.forEach(function(element){
+            if(otherSet.has(element)){
+                intersectionSet.add(element);
             }
         });
         return intersectionSet;
+    }
+    
+    //this method will test if the set is a subset of a different set (return true of false)
+    this.subset = function(otherSet){
+        let firstSet = this.values();
+        return firstSet.every(function(element){
+            return otherSet.has(element);
+        })
     }
     
 }
 
 
 // for test:
-  let setA = new Set();
-  let setB = new Set();
-  setA.add("a");
-  setA.add("b");
-  setA.add("c");
-  setB.add("c");
-  setB.add("d");
-  let intersectionSetAB = setA.intersection(setB);
-  (intersectionSetAB.values();
+let setA = new Set();
+let setB = new Set();
+setA.add("a");
+setA.add("b");
+setA.add("c");
+setB.add("c");
+setB.add("d");
+let intersectionSetAB = setA.intersection(setB);
+intersectionSetAB.values();
