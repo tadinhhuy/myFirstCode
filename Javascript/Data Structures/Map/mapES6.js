@@ -32,7 +32,8 @@ let Map = function() {
 		this.count = 0;
 	};
 };
+
+//For test
 let myMap = new Map();
 myMap.add('Nick',2);
 myMap.add('finger', 10);
-console.log(myMap.count);
