@@ -21,7 +21,7 @@ function LinkedList() {
         head = node;
     } else {
         var currentNode = head;
-        // iterate throught each "currentNode.next" to the end of the list
+        // iterate to the end of the list
         while(currentNode.next){
             currentNode  = currentNode.next;
         }
