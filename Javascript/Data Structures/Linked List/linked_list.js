@@ -20,7 +20,7 @@ function LinkedList() {
     if(head === null){
         head = node;
     } else {
-        currentNode = head;
+        var currentNode = head;
         // iterate throught each "currentNode.next" to the end of the list
         while(currentNode.next){
             currentNode  = currentNode.next;
