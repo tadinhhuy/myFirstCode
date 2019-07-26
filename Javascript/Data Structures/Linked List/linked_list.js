@@ -35,6 +35,19 @@ function LinkedList() {
   }; 
 
   this.remove = function(element){
-    
+    var currentNode = head;
+    var previousNode;
+    if(currentNode.element === element){
+      //remove the first node
+      head = currentNode.next;
+    }else{
+      //iterate through each element
+      while(currentNode.element !== element){
+        previousNode = currentNode;
+        currentNode = currentNode.next;
+      }
+      previousNode.next = currentNode.next;
+    }
+    length--;
   };
 }
