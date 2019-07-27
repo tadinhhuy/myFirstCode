@@ -50,4 +50,45 @@ function LinkedList() {
     }
     length--;
   };
+  
+  this.isEmpty = function(){
+    return length === 0;
+  }
+  
+  //method return the index of the given element
+  this.indexOf = function(element){
+    var currentNode = head;
+    var index = -1;
+    //iterate through each node
+    while(currentNode){
+      index++;
+      if(currentNode.element === element){
+        return index;
+      }
+      currentNode = currentNode.next;
+    }
+    return -1;
+  }
+  
+  //method return at element at a given index
+  this.elementAt = function(index){
+    var currentNode = head;
+    var count = 0;
+    while(count < index){
+      count++;
+      currentNode = currentNode.next;
+    } 
+    return currentNode.element;
+  }
+  
 }
+
+//For test:
+let list = new LinkedList();
+list.add("A");
+list.add("B");
+list.add("C");
+list.add("D");
+list.indexOf('B');
+list.elementAt(2);
+list.head();
