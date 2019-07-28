@@ -81,6 +81,31 @@ function LinkedList() {
     return currentNode.element;
   }
   
+  //Remove Elements from a Linked List by Index
+  this.removeAt = function(index){
+    var currentNode = head;
+    var previousNode;
+    var count = 0;
+    //return null if the given index is less than 0 and index greater than length
+    if(index < 0 || index >= length ){
+      return null;
+    }
+    //index = 0, the pointer is going to start at second node
+    if(index === 0){
+      head = currentNode.next;
+    }else{
+      while(count < index){
+      count++;
+      previousNode = currentNode;
+      currentNode = currentNode.next;
+    }
+    previousNode.next = currentNode.next;
+    }
+    length--;
+    //return the element of the removed node.
+    return currentNode.element;
+  }
+  
 }
 
 //For test:
