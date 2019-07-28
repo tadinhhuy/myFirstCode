@@ -107,6 +107,36 @@ function LinkedList() {
     return currentNode.element;
   }
   
+  //Add Elements at a Specific Index in a Linked List
+  this.addAt = function(index, element){
+    var node = new Node(element);
+    var currentNode = head;
+    var previousNode;
+    var count = 0;
+    
+    // return false if a node was unable to be added.
+    if(index < 0 || index >= length){
+      return false;
+    }
+    
+    // reassign head to the new node when the given index is 0.
+    if(index === 0){
+      node.next = currentNode;
+      head = node;
+    }else{
+      while(count < index){
+        count++;
+        previousNode = currentNode;
+        currentNode = currentNode.next;
+      }
+      //create a new node and point node.next to currentNode previousNode before the node
+      //illustration: previousNode - node(new node) - CurrentNode
+      node.next = currentNode;
+      previousNode = node;
+    }
+    length++;
+  }
+  
 }
 
 //For test:
