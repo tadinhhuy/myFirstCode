@@ -1,4 +1,4 @@
-```jsx
+
 const Items = (props) => {
   return( 
     <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
@@ -19,4 +19,4 @@ class ShoppingCart extends React.Component {
   
   }
 };
-```
+
