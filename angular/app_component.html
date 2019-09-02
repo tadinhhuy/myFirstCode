@@ -24,7 +24,7 @@
           <td><button class="btn btn-primary" (click)="removeUserName(name.id)">Delete</button></td>
       </tbody>
     </table>
-    <form *ngIf="showForm" (submit)="submitUserName(createForm)" #createForm="ngForm">
+    <form *ngIf="showForm" (ngSubmit)="submitUserName(createForm)" #createForm="ngForm">
       <label><input type="text" name="firstname" placeholder="Firstname" ngModel
           [(ngModel)]="newFirstName" /></label><br />
       <label><input type="text" name="lastname" placeholder="Lastname" ngModel
