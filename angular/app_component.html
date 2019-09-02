@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <div class="container">
+    <h2>Demo</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody *ngFor='let name of arrName'>
+        <tr>
+          <td>{{ name.firstname }}</td>
+          <td>{{ name.lastname }}</td>
+          <td>{{ name.email }}</td>
+          <td><button class="btn btn-primary" (click)="removeUserName(name.id)">Delete</button></td>
+      </tbody>
+    </table>
+    <form *ngIf="showForm" (submit)="submitUserName(createForm)" #createForm="ngForm">
+      <label><input type="text" name="firstname" placeholder="Firstname" ngModel
+          [(ngModel)]="newFirstName" /></label><br />
+      <label><input type="text" name="lastname" placeholder="Lastname" ngModel
+          [(ngModel)]="newLastName" /></label><br />
+      <label><input type="email" name="email" placeholder="Email@example.com" ngModel
+          [(ngModel)]="newEmail" /></label><br />
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <button class="btn btn-primary" (click)="showForm=true" *ngIf="!showForm">Create User Name</button>
+  </div>
+
+
+
+
+</body>
+
+</html>
