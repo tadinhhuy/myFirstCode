@@ -19,37 +19,96 @@ export class AppComponent {
 
   }
 
-  arrName: any[] = [
-    { id: 1, firstname: 'Ta', lastname: 'Huy', email: 'huy@example.com' },
-    { id: 2, firstname: 'Ta', lastname: 'Nick', email: 'nick@example.com' },
-    { id: 3, firstname: 'Huynh', lastname: 'Annie', email: 'annie@example.com' },
-    { id: 4, firstname: 'Reyes', lastname: 'Lynn', email: 'lynn@example.com' }
-  ];
+   listData: BookItem[] = [
+    {
+      title: "Harry Potter",
+      author: "J.K. Rowling",
+      number: 32,
+      date: 1998 - 12 - 0o5,
+      id: 1
+    },
+    {
+      id: 2,
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      number: 34,
+      date: 1885 - 0o1 - 12
+    },
+    {
+      title: "The Catcher in the Rye",
+      author: "J.D. Salinger",
+      number: 12,
+      date: 2019 - 0o2 - 0o2,
+      id: 3
+    },
+    {
+      title: "The Hobbit",
+      author: "J.R.R. Tolkien",
+      number: 51,
+      date: 2006 - 0o1 - 0o3,
+      id: 4
+    },
+    {
+      title: "Fahrenheit 451",
+      author: "Ray Bradbury",
+      number: 18,
+      date: 2005 - 0o3 - 0o3,
+      id: 5
+    },
+    {
+      title: "Pride and Prejudice",
+      author: "Jane Austen",
+      number: 15,
+      date: 1859 - 0o3 - 0o1,
+      id: 6
+    },
+    {
+      title: "To Kill a Mockingbir",
+      author: "Alexander",
+      number: 132,
+      date: 2018 - 12 - 31,
+      id: 16
+    },
+    {
+      id: 21,
+      title: "To Kill a Mockingbir",
+      author: "Alexander",
+      number: 13,
+      date: 2018 - 12 - 31
+    }
+  ]
 
-  submitUserName(createForm) {
-    createForm.value.email = "@example.com";
-    this.arrName.push(createForm.value);
-    this.newFirstName = '';
-    this.newLastName = '';
-    this.newEmail = '';
-  }
-
-  // addUserName() {
-  //   this.arrName.push({
-  //     id: this.arrName.length + 1,
-  //     firstname: this.newFirstName,
-  //     lastname: this.newLastName,
-  //     email: this.newEmail + "@example.com"
-  //   });
-  //   this.newFirstName = '';
-  //   this.newLastName = '';
-  //   this.newEmail = '';
+  // getListBook() {
+  //   return of(this.listData);
   // }
 
-  removeUserName(id: number) {
-    const index = this.arrName.findIndex(element => element.id === id);
-    this.arrName.splice(index, 1);
-  }
+  // addBook(value: BookItem): Observable<Object> {
+  //   return of(this.listData.push(value));
+  // }
+
+  // removeBook(id: number): Observable<Object> {
+  //   let index = this.listData.findIndex(ele => ele.id === id);
+  //   let result = this.listData.splice(index);
+  //   return of (result);
+    
+  // }
+
+  // getBook(id: number): Observable<BookItem> {
+  //   let data: BookItem = null;
+  //   for (let ele of this.listData) {
+  //     if (ele.id === id) {
+  //       data = ele;
+  //       break;
+  //     }
+  //   }
+  //   return of(data);
+  // }
+
+  // updateBook(id: number, value: BookItem): Observable<Object> {
+  //   let res: BookItem = null;
+    
+  //   return of(res);
+  // }
 
 
 
